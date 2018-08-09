@@ -1,0 +1,164 @@
+{
+    "users": [
+      {
+        "birthday": "1993-11-22",
+        "email": "uriel621@live.com",
+        "favoriteColor": "teal",
+        "id": "621",
+        "image": "http://img10.deviantart.net/bb51/i/2012/130/f/d/rigby_by_fajar2-d4q6g3w.png",
+        "joinDate": "2018-09-08",
+        "name": "Ever Uriel Garcia",
+        "username": "uriel621"
+      },
+      {
+        "birthday": 1480634264530,
+        "email": "Kira.Rosenbaum83@hotmail.com",
+        "favoriteColor": "indigo",
+        "id": "43aa36bb-7c93-4651-a317-1af1b4879856",
+        "image": "https://s3.amazonaws.com/uifaces/faces/twitter/mrjamesnoble/128.jpg",
+        "joinDate": 1480634264531,
+        "name": "Mandy Schowalter",
+        "username": "Carlee.Stokes71"
+      },
+      {
+        "birthday": 1480634264533,
+        "email": "Sandrine54@hotmail.com",
+        "favoriteColor": "olive",
+        "id": "952492cc-5ddb-42f9-8c8d-0e2f4e14652a",
+        "image": "https://s3.amazonaws.com/uifaces/faces/twitter/calebjoyce/128.jpg",
+        "joinDate": 1480634264533,
+        "name": "Cedrick Spinka",
+        "username": "Oral46"
+      },
+      {
+        "birthday": 1480634264533,
+        "email": "Allene73@yahoo.com",
+        "favoriteColor": "ivory",
+        "id": "b2e00c12-428d-40fe-a996-e8309ff419ee",
+        "image": "https://s3.amazonaws.com/uifaces/faces/twitter/fuck_you_two/128.jpg",
+        "joinDate": 1480634264534,
+        "name": "Mrs. Bonita Koepp",
+        "username": "Kobe16"
+      },
+      {
+        "birthday": 1480634264534,
+        "email": "Reid15@yahoo.com",
+        "favoriteColor": "cyan",
+        "id": "09d169f9-b359-4953-903d-6d6338167c51",
+        "image": "https://s3.amazonaws.com/uifaces/faces/twitter/nfedoroff/128.jpg",
+        "joinDate": 1480634264534,
+        "name": "Drake Blick",
+        "username": "Johnathan41"
+      },
+      {
+        "birthday": 1480634264535,
+        "email": "Rosetta_Vandervort@hotmail.com",
+        "favoriteColor": "cyan",
+        "id": "41be669c-a3df-4b66-b10c-ac7d66c0bff3",
+        "image": "https://s3.amazonaws.com/uifaces/faces/twitter/beweinreich/128.jpg",
+        "joinDate": 1480634264535,
+        "name": "Barton Predovic",
+        "username": "Darrion_Fadel27"
+      },
+      {
+        "birthday": 1480634264535,
+        "email": "Ernest11@gmail.com",
+        "favoriteColor": "pink",
+        "id": "d84e03f9-f926-4cf5-90f1-020211aad632",
+        "image": "https://s3.amazonaws.com/uifaces/faces/twitter/mvdheuvel/128.jpg",
+        "joinDate": 1480634264535,
+        "name": "Lupe Berge",
+        "username": "Nestor51"
+      },
+      {
+        "birthday": 1480634264535,
+        "email": "Vilma81@yahoo.com",
+        "favoriteColor": "gold",
+        "id": "0531d60d-62a2-42a6-bef1-457e05cb6bcf",
+        "image": "https://s3.amazonaws.com/uifaces/faces/twitter/alagoon/128.jpg",
+        "joinDate": 1480634264535,
+        "name": "Patience Schiller",
+        "username": "Darlene.Zemlak92"
+      },
+      {
+        "birthday": 1480634264535,
+        "email": "Summer_Kassulke0@yahoo.com",
+        "favoriteColor": "gold",
+        "id": "d1aacbc5-5154-4788-855f-121bacb3519e",
+        "image": "https://s3.amazonaws.com/uifaces/faces/twitter/santi_urso/128.jpg",
+        "joinDate": 1480634264535,
+        "name": "Charles Christiansen III",
+        "username": "Shawna79"
+      },
+      {
+        "birthday": 1480634264535,
+        "email": "Oswald96@yahoo.com",
+        "favoriteColor": "yellow",
+        "id": "c9b3aa14-c96f-4572-9bab-d0584d461806",
+        "image": "https://s3.amazonaws.com/uifaces/faces/twitter/geneseleznev/128.jpg",
+        "joinDate": 1480634264535,
+        "name": "Burdette Gutmann",
+        "username": "Presley_Williamson"
+      },
+      {
+        "birthday": 1480634264535,
+        "email": "Guillermo_Daugherty27@hotmail.com",
+        "favoriteColor": "lavender",
+        "id": "98e65f3f-6dd5-4aa4-b318-2d4a9ae9673d",
+        "image": "https://s3.amazonaws.com/uifaces/faces/twitter/bighanddesign/128.jpg",
+        "joinDate": 1480634264535,
+        "name": "Summer Quitzon",
+        "username": "Jevon_OConnell"
+      },
+      {
+        "birthday": 1480634264536,
+        "email": "Jackie_Willms@gmail.com",
+        "favoriteColor": "cyan",
+        "id": "0ebfca2b-f3de-4479-bca1-6a0d0269339b",
+        "image": "https://s3.amazonaws.com/uifaces/faces/twitter/S0ufi4n3/128.jpg",
+        "joinDate": 1480634264536,
+        "name": "Juana Turner",
+        "username": "Donnell.Kris70"
+      },
+      {
+        "birthday": 1480634264536,
+        "email": "Estefania61@yahoo.com",
+        "favoriteColor": "indigo",
+        "id": "aaf4b271-ccc8-4548-ae89-168538398a30",
+        "image": "https://s3.amazonaws.com/uifaces/faces/twitter/ismail_biltagi/128.jpg",
+        "joinDate": 1480634264536,
+        "name": "Judson Effertz",
+        "username": "Alexanne57"
+      },
+      {
+        "birthday": 1480634264536,
+        "email": "Bianka_DAmore@yahoo.com",
+        "favoriteColor": "red",
+        "id": "de3c3872-84df-456b-ac5e-12a74124a8ae",
+        "image": "https://s3.amazonaws.com/uifaces/faces/twitter/marcobarbosa/128.jpg",
+        "joinDate": 1480634264536,
+        "name": "Alaina Reilly",
+        "username": "Rosalee26"
+      },
+      {
+        "birthday": 1480634264536,
+        "email": "Nya_Rosenbaum63@gmail.com",
+        "favoriteColor": "orange",
+        "id": "b7dd890f-3d17-40a0-9364-8cac8c8852b4",
+        "image": "https://s3.amazonaws.com/uifaces/faces/twitter/marclgonzales/128.jpg",
+        "joinDate": 1480634264536,
+        "name": "Ms. Greyson Klein",
+        "username": "Johnny.Funk78"
+      },
+      {
+        "birthday": 1480634264536,
+        "email": "Zackary.Koch64@hotmail.com",
+        "favoriteColor": "indigo",
+        "id": "c37ee8be-a538-43b5-b28e-fd44ae8f9e92",
+        "image": "https://s3.amazonaws.com/uifaces/faces/twitter/travis_arnold/128.jpg",
+        "joinDate": 1480634264536,
+        "name": "Skye Pagac",
+        "username": "Maia.Mitchell"
+      }
+    ]
+  }
