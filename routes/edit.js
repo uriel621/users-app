@@ -3,6 +3,7 @@ const edit = (request, response) => {
         return response.sendStatus(400);
     }
 
+    // Load data to inputs for editing users
     response.render('edit.hbs', {
         "birthday":request.body.birthday,
         "email":request.body.email,

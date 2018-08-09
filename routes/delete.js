@@ -29,4 +29,4 @@ const remove = (request, response) => {
     return response.redirect('/');
 }
 
-module.exports = remove
+module.exports = remove;

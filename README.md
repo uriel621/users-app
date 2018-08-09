@@ -1,10 +1,10 @@
-# Distance Calulator App
+# Users App
 
 This application where users can create, load users from JSON file, Update, and Delete
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes
 
 ### Prerequisites
 
@@ -22,25 +22,21 @@ git clone https://github.com/uriel621/users-app.git
 ```
 
 In the directory open the terminal and follow the commandments
+
+Install local packages
 ```
-npm install express
+npm install 
 ```
 
+Run the application and it should be in localhost:3000
 ```
-npm install hbs
-```
-
-```
-npm install body-parser
+npm start 
 ```
 
-```
-Run Node
-    node server
-```
+After running the application it should look like this NOTE: None of the POST method working in Heroku like it works on local host https://shielded-mesa-72796.herokuapp.com/
 
-After running the application it should look like this http://heroku.com/
-
+### Issues
+The first time the app makes a HTTP POST the template will not be rendered unless another POST is made and then the application will work as it should
 
 ## Built With
 

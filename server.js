@@ -19,7 +19,7 @@ app.use(express.static(__dirname + '/public'))
 
 // Read (load data)
 app.get('/', (request, response) => {
-    let json = require( "./public/users.json" )
+    let json = require( "./public/users.json" );
     let users = json.users;
     response.render('home.hbs', {
         "users":users
@@ -65,4 +65,4 @@ app.post('/create', urlencodedParser, create);
 app.post('/edit', urlencodedParser, edit);
 app.post('/delete', urlencodedParser, remove);
 
-app.listen(port, () => console.log(`App listening on port ${port}`));
+app.listen(port, () => console.log(`App listening on port ${ port }`));

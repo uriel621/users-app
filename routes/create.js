@@ -5,6 +5,7 @@ const create = (request, response) => {
         return response.sendStatus(400);
     }
 
+    // data collected from the form
     let info = {
         "birthday":request.body.birthday,
         "email":request.body.email,
