@@ -1,8 +1,10 @@
 const express = require('express');
 const hbs = require('hbs');
 const bodyParser = require('body-parser');
-const app = express();
 const fs = require('fs');
+
+const port = process.env.PORT || 3000;
+const app = express();
 
 const create = require('./routes/create');
 const remove = require('./routes/delete');
@@ -63,4 +65,4 @@ app.post('/create', urlencodedParser, create);
 app.post('/edit', urlencodedParser, edit);
 app.post('/delete', urlencodedParser, remove);
 
-app.listen(3001, () => console.log('Example app listening on port 3001!'));
+app.listen(port, () => console.log(`App listening on port ${port}`));
