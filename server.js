@@ -19,12 +19,14 @@ app.use(express.static(__dirname + '/public'))
 
 // Read (load data)
 app.get('/', (request, response) => {
-    let json = require( "./public/users.json" );
+    let json = fs.readFileSync('./public/users.json');
+        json = JSON.parse(json);
     let users = json.users;
     response.render('home.hbs', {
         "users":users
     });
 })
+
 
 // The About Page (nothing really)
 app.get('/about', (request, response) => {
