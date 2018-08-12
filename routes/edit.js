@@ -1,8 +1,10 @@
 const edit = (request, response) => {
+    console.log(621.87 + 'edit')
+
     if (!request.body){
         return response.sendStatus(400);
     }
-
+    console.log(621)
     // Load data to inputs for editing users
     response.render('edit.hbs', {
         "birthday":request.body.birthday,

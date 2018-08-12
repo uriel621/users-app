@@ -152,6 +152,13 @@
         <section id="team" class="pb-5">
             <div class="container">
                 <h5 class="section-title h1">All Users</h5>
+                
+                <div style="text-align:center">
+                    <span>{{ status }}</span>
+                </div>
+
+                <br />
+
                 <div class="row">
                     {{#each users}}
                     <!-- user -->
@@ -190,25 +197,8 @@
                                             </div>
                                             
                                             <ul class="list-inline">
-                                                <form style="display:inline-block; width: 25%;" action="/edit" method="post">
-                                                    <input style="display:none" value="{{ this.birthday }}" name="birthday">
-                                                    <input style="display:none" value="{{ this.email }}" name="email">
-                                                    <input style="display:none" value="{{ this.favoriteColor }}" name="favoriteColor">
-                                                    <input style="display:none" value="{{ this.id }}" name="id">
-                                                    <input style="display:none" value="{{ this.image }}" name="image">
-                                                    <input style="display:none" value="{{ this.joinDate }}" name="joinDate">
-                                                    <input style="display:none" value="{{ this.name }}" name="name">
-                                                    <input style="display:none" value="{{ this.username }}" name="username">
-
-                                                    <button style="width: 100%;" class="list-inline-item btn btn-primary">Edit</button>
-                                                </form>
-
-
-                                                <form class="remove-form" style="display:inline-block; width: 25%;" action="/delete" method="post">
-
-                                                    <input style="display:none" value="{{ this.username }}" name="username">
-                                                    <button style="width: 100%;" class="list-inline-item btn btn-warning">Remove</button>
-                                                </form>
+                                                <a style="display:inline-block; width: 25%;" href="/edit/{{ this.username }}"><button class="list-inline-item btn btn-primary">Edit</button></a>
+                                                <a style="display:inline-block; width: 25%;" href="/delete/{{ this.username }}"><button class="list-inline-item btn btn-warning">Remove</button></a>
                                             </ul>
                                         </div>
                                     </div>
