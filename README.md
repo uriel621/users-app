@@ -36,7 +36,7 @@ npm start
 After running the application it should look like this NOTE: None of the POST method working in Heroku like it works on local host https://shielded-mesa-72796.herokuapp.com/
 
 ### Issues
-The first time the app makes a HTTP POST the template will not be rendered unless another POST is made and then the application will work as it should
+[FIXED] The first time the app makes a HTTP POST the template will not be rendered unless another POST is made and then the application will work as it should
 
 ## Built With
 
