@@ -17,14 +17,17 @@ hbs.registerPartials(__dirname + '/views/partials');
 app.set('view engine', 'hbs')
 app.use(express.static(__dirname + '/public'))
 
-app.all('/public', function(req, res, next) {
+app.get('/users', function(req, res, next) {
+    let file = fs.readFileSync('public/users.json');
+    file = JSON.parse(file);
+
     res.header("Access-Control-Allow-Origin", "*");
     res.header("Access-Control-Allow-Headers", "X-Requested-With");
-    next();
-});
+    res.send(file);
+   });
 
 // Read (load data)
-app.get('/', (request, response) => {
+app.get('*', (request, response) => {
     let file = fs.readFileSync('public/users.json');
         file = JSON.parse(file);
     let users = file.users;
