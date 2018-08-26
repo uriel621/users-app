@@ -44,7 +44,15 @@ const create = (request, response) => {
 
     user.users.push(info);
     fs.writeFileSync('public/users.json', JSON.stringify(user));
-    return response.redirect('/');
+
+    // var origin = request.get('origin');
+    var host = request.get('host');
+    if(host !== "http://localhost:4000"){
+        return response.json(user);
+    }
+    else {
+        return response.redirect('/');
+    }
 }
 
 module.exports = create;

@@ -15,13 +15,9 @@ let save_users = (users) => {
 };
 
 const remove = (request, response) => {
-    console.log('DELETE js FRST' + request.params.id);
-
     if (!request.params.id){
         return response.sendStatus(400);
-    } 
-
-    console.log('DELETE js' + request.params.id);
+    }
 
     let file = fetch_users();
     let filteredUsers = file.users.filter((user) => user.username !== request.params.id);

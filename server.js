@@ -3,7 +3,7 @@ const hbs = require('hbs');
 const bodyParser = require('body-parser');
 const fs = require('fs');
 
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 4000;
 const app = express();
 
 const create = require('./routes/create');
@@ -15,6 +15,15 @@ let urlencodedParser = bodyParser.urlencoded({ extended: false })
 
 hbs.registerPartials(__dirname + '/views/partials');
 app.set('view engine', 'hbs')
+// app.use(express.static(__dirname + '/public'))
+
+
+app.use(function(req, res, next) {
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+    next();
+});
+app.use(bodyParser.json());
 app.use(express.static(__dirname + '/public'))
 
 app.get('/users', function(req, res, next) {
@@ -24,10 +33,10 @@ app.get('/users', function(req, res, next) {
     res.header("Access-Control-Allow-Origin", "*");
     res.header("Access-Control-Allow-Headers", "X-Requested-With");
     res.send(file);
-   });
+});
 
 // Read (load data)
-app.get('*', (request, response) => {
+app.get('/', (request, response) => {
     let file = fs.readFileSync('public/users.json');
         file = JSON.parse(file);
     let users = file.users;
@@ -43,16 +52,24 @@ app.get('/edit/:id', (request, response) => {
     for(let user of file.users) {
         if(user.username === request.params.id){
             found = true;
-            response.render('edit.hbs', {
-                "birthday":user.birthday,
-                "email":user.email,
-                "favoriteColor":user.favoriteColor,
-                "id":user.id,
-                "image":user.image,
-                "joinDate":user.joinDate,
-                "name":user.name,
-                "username":user.username
-            });
+            if(!request.headers.origin){
+                response.render('edit.hbs', {
+                    "birthday":user.birthday,
+                    "email":user.email,
+                    "favoriteColor":user.favoriteColor,
+                    "id":user.id,
+                    "image":user.image,
+                    "joinDate":user.joinDate,
+                    "name":user.name,
+                    "username":user.username
+                });
+            }
+            else {
+                return response.json(user);
+            }
+
+
+
         }
     }
     if(!found){
@@ -109,10 +126,39 @@ app.post('/update', urlencodedParser, (request, response) => {
             user.name = request.body.name;
             user.username = request.body.username;
             fs.writeFileSync('public/users.json', JSON.stringify( {"users":file.users} ));
+
+            // var host = request.get('host');
+            console.log('ORIGIN', request.headers.origin)
+            if(request.headers.origin === 'http://localhost:4000'){
+                console.log('IF', request.headers.origin)
+                return response.redirect('/');
+            }
+            else {
+                console.log('ELSE', request.headers.origin)
+                return response.json({
+                    "users":file.users
+                });
+            }
         }
     }
-    return response.redirect('/');
+    
 })
+
+app.post('/delete', urlencodedParser, (request, response) => {
+    let file = fs.readFileSync('public/users.json');
+        file = JSON.parse(file);
+
+        file.users.forEach((user, index, array) => {
+            if(request.body.username === user.username){
+                file.users.splice(index, 1)
+                fs.writeFileSync('public/users.json', JSON.stringify( {"users":file.users} ));
+                return response.json({
+                    "users":file.users
+                });
+            }
+        })
+})
+
 app.get('/delete/:id', remove)
 app.post('/create', urlencodedParser, create);
 app.post('/edit/*?', urlencodedParser, edit);
