@@ -127,7 +127,6 @@ app.post('/update', urlencodedParser, (request, response) => {
             user.username = request.body.username;
             fs.writeFileSync('public/users.json', JSON.stringify( {"users":file.users} ));
 
-            // var host = request.get('host');
             console.log('ORIGIN', request.headers.origin)
             if(request.headers.origin === 'http://localhost:4000'){
                 console.log('IF', request.headers.origin)
