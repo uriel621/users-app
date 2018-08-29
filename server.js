@@ -133,7 +133,6 @@ app.post('/update', urlencodedParser, (request, response) => {
                 return response.redirect('/');
             }
             else {
-                console.log('ELSE', request.headers.origin)
                 return response.json({
                     "users":file.users
                 });
