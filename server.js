@@ -128,7 +128,7 @@ app.post('/update', urlencodedParser, (request, response) => {
             fs.writeFileSync('public/users.json', JSON.stringify( {"users":file.users} ));
 
             console.log('ORIGIN', request.headers.origin)
-            if(request.headers.origin === 'http://localhost:4000'){
+            if(request.headers.origin === 'https://shielded-mesa-72796.herokuapp.com/'){
                 console.log('IF', request.headers.origin)
                 return response.redirect('/');
             }

@@ -1,6 +1,4 @@
 const edit = (request, response) => {
-    console.log(621.87 + 'edit')
-
     if (!request.body){
         return response.sendStatus(400);
     }

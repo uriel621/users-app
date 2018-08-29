@@ -47,7 +47,7 @@ const create = (request, response) => {
 
     // var origin = request.get('origin');
     var host = request.get('host');
-    if(host !== "http://localhost:4000"){
+    if(host !== "https://shielded-mesa-72796.herokuapp.com/"){
         return response.json(user);
     }
     else {
