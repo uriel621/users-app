@@ -1,3 +1,5 @@
+require('./config/config');
+
 const express = require('express');
 const hbs = require('hbs');
 const bodyParser = require('body-parser');
@@ -5,6 +7,9 @@ const fs = require('fs');
 
 const port = process.env.PORT || 4000;
 const app = express();
+
+var { mongoose } = require('./db/mongoose');
+var { Authenticate } = require('./models/authenticate');
 
 const create = require('./routes/create');
 const remove = require('./routes/delete');
@@ -157,8 +162,44 @@ app.post('/delete', urlencodedParser, (request, response) => {
         })
 })
 
+var kittySchema = new mongoose.Schema({
+    name: String
+  });
+  var Kitten = mongoose.model('Kitten', kittySchema);
+app.get('/auth', (request, response) => {
+    // console.log('????', Authenticate)
+    // Authenticate.find((error, kittens) => {
+    //     console.log(kittens)
+    // })
+    // var kittySchema = new mongoose.Schema({
+    //     name: String
+    //   });
+
+    var Kitten = mongoose.model('Kitten', kittySchema);
+    var silence = new Kitten({ name: 'Silence' });
+    silence.save();
+    console.log(silence.name); // 'Silence'
+        // .then((lol) => {
+        //     console.log(lol)
+        //     response.send({lol});
+        // }, 
+        // (e) => {
+        //     response.status(400).send(e);
+        // });
+    response.send(621)
+})
+
+app.get('/and', (request, response) => {
+    // kittySchema.update({ Silence: true }, fn);
+    Kitten.update({ Silence: true }, function (err, raw) {
+        if (err) return handleError(err);
+        console.log('The raw response from Mongo was ', raw);
+      });
+    response.send(621)
+})
+// MyModel.update({ age: { $gt: 18 } }, { oldEnough: true }, fn);
 app.get('/delete/:id', remove)
 app.post('/create', urlencodedParser, create);
 app.post('/edit/*?', urlencodedParser, edit);
 
-app.listen(port, () => console.log(`App listening on port ${ port }`));
+app.listen(port, () => console.log(`App listening on port ${ port }!!!`));
